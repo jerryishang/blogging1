@@ -1,0 +1,248 @@
+.container {
+	background-image: none;
+	width: 1024px;
+	margin-right: auto;
+	margin-left: auto;
+}
+body {
+	background-image: url(../images/bg_body.png);
+	margin-top: 0px;
+}
+.navbar ul {
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	list-style-type: none;
+}
+.navbar ul li {
+	display: inline;
+	margin-right: 10px;
+	background-image: url(../images/navbar_button.png);
+	/*without dimensions, the buttons wraps around text in both browser and dreamweaver*/
+	/*height: 44px;
+	width: 178px;*/
+	background-color: #FC3;
+	border: 1px solid #FF0;
+	/*float for background to have effect*/
+	/*removing float allowed box to squeeze in around text*/
+	float: left;
+	font-family: "Bell MT";
+	font-size: 36px;
+	font-style: normal;
+	font-weight: bold;
+	clear: none;
+	/*left: auto;
+	top: auto;
+	right: auto;
+	bottom: auto;*/
+	text-align: center;
+	color: #006;
+	/*dropdown absolute items to its relative/parent*/
+	/*property not working in browsers unless you have float left or right on*/
+	position: relative;
+}
+/*
+#about {
+	/*dropdown absolute items to its relative/parent*/
+	/*position: relative;
+}*/
+.navbar ul li a {
+	text-decoration: none;
+}
+.navbar ul li a:hover {
+	background-image: url(../images/navbar_button_hover.png);
+	font-family: "Bell MT";
+	font-size: 36px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	/*having float eliminates hovering effect*/
+	/*margin-right: auto;
+	margin-left: auto;*/
+	color: #0F0;
+	
+	/*height: 44px;
+	width: 178px;*/
+	border: 1px solid #33F;
+	background-color: #36F;
+	display: inline;
+	clear: none;
+	/*don't have float or else blue button gets out of line*/
+	float: none;
+}
+.navbar ul li a.current {
+	font-size: 36px;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #3F3;
+	background-image: url(../images/navbar_button_active.png);
+	text-align: center;
+	border: 1px solid #360;
+	color: #F36;
+}
+
+
+
+.middle {
+	height: 540px;
+	width: 1024px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #CCC;	
+}
+/*.bottom {
+	background-image: url(../images/about/bg_bottom.png);
+	height: 582px;
+	width: 1024px;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
+}*/
+
+
+.header {
+	background-image: url(../images/bg_header.png);
+	width: 1024px;
+	height: 185px;
+}
+
+.navbar ul li .subnav {
+	display: none;
+	/*position: absolute;*/
+}
+.navbar ul li .subnav li {
+	/*background-image: url(../images/resumes/navbar_button.png);*/
+	/*border: 1px solid #FFF;*/	
+	/*leave out float:none or have float:left so dropdown shows*/
+	float: left;
+	
+}
+
+.navbar ul li .subnav li a {
+	
+	/*height: 44px;*/
+	font-family: "Bell MT";
+	font-size: 24px;
+}
+.navbar ul li:hover ul.subnav {
+	display: block;
+	position: absolute;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	
+}
+.navbar ul li:hover ul.subnav a {
+	width: 160px;
+	display: block;
+	/*line below mushes list items together*/
+	/*position: absolute;
+	text-decoration: none;*/
+}
+
+.title {
+	font-family: "Bell MT";
+	color: #63C;
+	font-weight: bolder;
+	text-transform: capitalize;
+	height: 70px;
+	width: 200px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 50px;
+	margin-left: auto;
+	font-size: 100px;
+}
+#slider {
+	height: 540px;
+	width: 720px;
+	overflow: hidden;
+	margin: auto;
+}
+.middle a {
+	background-color: #CCC;
+	color: #666;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+.middle a.left {
+	float: left;
+}
+
+.middle a.right {
+	float: right;
+}
+
+#slider>img {
+	display: none;
+	float: left;
+	height: 540px;
+	width: 720px;
+	
+}
+.footer {
+	height: 75px;
+	width: 1024px;
+	margin: auto;
+	background-image: url(../images/bg_footer.png);
+}
+form {
+	width: 100px;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 30px;
+	text-align: center;
+}
+.custom {
+	border-radius: 5px;
+	/*certain browser*/
+	-webkit-border-radius: 5px;
+	background-color: #FFF;
+	border: 1px solid #CCC;	
+	outline: none;
+}
+.custom:focus {
+	border: 1px solid #56b4ef;
+	/*box-shadow is a css3 element*/
+	/*x-axis,y-axis, blur, spread*/
+	box-shadow: 0px 0px 3px 1px #c8def0;
+}
+
+.bottom {
+	height: 520px;
+	width: 1024px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #CCC;	
+}
+
+.tab-panels ul{
+	margin: 0;
+	padding: 0;
+}
+.tab-panels ul li{
+	list-style-type:none;
+	display: inline-block;
+	background: #999;
+	margin: 0;
+	padding: 3px 10px;
+	border-radius: 10px 10 px 0 0;
+	color: #fff;
+	font-weight: 200;
+}
+	
+.tab-panels ul li:hover {
+	color: #fff;
+	background: #666;
+}
+	
+.tab-panels ul li.active{
+	color: #fff;
+	background: #666;
+}
+	
+.tab-panels .panel{
+	display:block;
+}

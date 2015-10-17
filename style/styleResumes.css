@@ -1,0 +1,99 @@
+.container {
+	background-image: none;
+	width: 1420px;
+	margin-right: auto;
+	margin-left: auto;
+}
+body {
+	background-image: url(../images/resumes/bg_body.png);
+	margin-top: 0px;
+}
+.navbar {
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	list-style-type: none;
+}
+.navbar ul li {
+	display: inline;
+	margin-right: 10px;
+	
+	background-image: url(../images/resumes/navbar_button.png);
+	height: 44px;
+	width: 178px;
+	background-color: #FC3;
+	border: 1px solid #FF0;
+	/*float for background to have effect*/
+	/*removing float allowed box to squeeze in around text*/
+	/*float: left;*/
+	font-family: "Bell MT";
+	font-size: 36px;
+	font-style: normal;
+	font-weight: bold;
+	clear: none;
+	left: auto;
+	top: auto;
+	right: auto;
+	bottom: auto;
+	text-align: center;
+	color: #006;
+}
+.navbar ul li a {
+	text-decoration: none;
+}
+.navbar ul li a:hover {
+	background-image: url(../images/resumes/navbar_button_hover.png);
+	font-family: "Bell MT";
+	font-size: 36px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	/*having float eliminates hovering effect*/
+	/*margin-right: auto;
+	margin-left: auto;*/
+	color: #0F0;
+	
+	height: 44px;
+	width: 178px;
+	border: 1px solid #33F;
+	background-color: #36F;
+	display: inline;
+	clear: none;
+	float: none;
+}
+.navbar ul li a.current {
+	font-size: 36px;
+	font-weight: bold;
+	color: #900;
+	text-decoration: none;
+	background-color: #3C0;
+	background-image: url(../images/resumes/navbar_button_active.png);
+	text-align: center;
+	border: 1px solid #360;
+}
+
+
+
+.middle {
+	height: 540px;
+	width: 1410px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(../images/resumes/bg_middle.png);
+}
+.bottom {
+	background-image: url(../images/resumes/bg_bottom.png);
+	height: 436px;
+	width: 1410px;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+.header {
+	background-image: url(../images/resumes/bg_header.png);
+	width: 1420px;
+	height: 285px;
+}

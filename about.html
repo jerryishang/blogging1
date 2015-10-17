@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>About Me</title>
+<link href="style/styleAbout.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/slide.js"></script>
+<script src="js/search.js"></script>
+<script>
+	$(function(){
+		$('.tab-panels .tabs li').on('click',function(){
+			$('.tab-panels .tabs li.active').removeClass('active');
+			$(this).addClass('active');
+			//figure out which panel to show
+			var panelToShow = $(this).attr('rel');
+			
+			$('.tab-panels .panel.active').slideUp(300,showNewPanel);
+			
+			function showNewPanel(){
+				// need to take away active class of line above in order to give a new
+				$(this).removeClass('active');
+				//find id of panelToShow and slide panel down
+				$('#'+panelToShow).slideDown(300,function(){
+				//(this) refers to panelToShow parenthesis above
+					$(this).addClass('active');
+				});
+			}//showNewPanel
+		});//$('.tab-panels .tabs li').on('click',function(){
+			
+	});
+	</script>
+</head>
+
+<body>
+<div class="container">
+  <div class="header">
+    <div class="title">About</div>
+  	
+    <div class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="resumes.html">Resume</a></li>
+        <li><a href="about.html" class="current">About</a></li>
+        <li>Contact
+       	  <ul class="subnav">
+            	<li><a href="#">Information</a></li>
+                <li><a href="contact.html">Message</a></li>
+            </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="middle">
+    <div id="slider">
+
+        <img id="1" src="images/about/image1.jpg" />
+        <img id="2" src="images/about/image2.jpg" />
+        <img id="3" src="images/about/image3.jpg" />
+        <img id="4" src="images/about/image4.jpg" />
+        <img id="5" src="images/about/image5.jpg" />
+        
+        
+    </div>
+    	<!--stops it going to # symbol-->
+    	<a href="#" class="left" onclick="previous(); return false;">previous</a>
+		<a href="#" class="right" onclick="next(); return false;">next</a>
+  </div>
+  <div class="bottom">
+  	<div class="tab-panels">
+    	<ul class="tabs">
+        	<li rel="intro">Introduction</li>
+            <li rel="edu">Education</li>
+            <li rel="interests">Interests</li>
+        </ul>
+        
+        <div id="intro" class="panel active">
+        Hello, my name is Yisheng (Jerry) Zhang. I am more often called by my first name Jerry, but I prefer Yisheng because Jerry is too common of a name. I am 19 years old, and I live in the North York area of the Toronto area.<br />
+        I tend to spend most of my free time and school time on my own. I hardly ever hang out with friends, and I am the kind of guy you see sitting in an empty row in the classroom.<br />
+        Nevertheless, I strongly see the power in group work, and I am eager to have more study partners, and join more study groups. I am even willing to create a side project with a group of people if I ever have time. Trying to self-learn a whole new topic is extremely difficult, but it is often what students face in during university.<br />
+        </div>
+        <div id="edu" class="panel">
+        I am currently a 2a Electrical Engineering student at the University of Waterloo. I am looking for a co-op placement for the winter 2016 term.
+        </div>
+        <div id="interests" class="panel">
+        Unlike my friends who have grown up to be musicians or entrepreneurs, I never stayed for years in whatever class I took. I wasted a lot of my free summers and vacations watching movies, fooling around on the internet, or playing video games. Those are pretty wasteful habits. 
+        </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+  	<form action="search_sample.php" method="post"><!--placeholder is what appears in box-->
+    	<input type="text" name="search" class="custom" placeholder="find users..." onkeydown="searchq();"/>
+        <input type="submit" value="-->" />
+    </form>
+  </div>
+  
+</div><!--container-->
+<div id="output"></div>
+</div>
+</body>
+</html>
